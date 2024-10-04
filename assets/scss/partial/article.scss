@@ -35,6 +35,9 @@ article {
         font-weight: bold;
         font-size: 1.2rem;
       }
+      a:hover {
+        color: $color-accent-1;
+      }
     }
   }
   .content img,
