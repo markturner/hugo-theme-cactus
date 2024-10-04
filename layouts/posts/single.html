@@ -74,7 +74,7 @@
     </div>
     {{ end }}
     <div class="content" itemprop="articleBody">
-      {{ .Content}}
+      {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `<a href="#${2}" class="hanchor" ariaLabel="Anchor">${1}</a> ${3}` | safeHTML }}
     </div>
   </article>
 
